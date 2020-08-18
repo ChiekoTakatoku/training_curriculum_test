@@ -7,10 +7,10 @@
   <% end %>
 
   <div class=calendar>
-    <% @week_days.each_with_index do |day, index| %>
+    <% @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
-          <%= day[:month] %>/<%= day[:date] %><%= @wdays[index] %>
+          <% day[:month] %>/<% day[:date] %>
         </div>
         <ul class='content'>
         <% if day[:plans].length != 0 %>
